@@ -194,36 +194,3 @@ def myNC1(labels, H, C, M):
     Sw_invSb = torch.trace(Sw @ inv_Sb).item()
     return Sw_invSb
     
-class graphs():
-    def __init__(self):
-        self.accuracy     = []
-        self.loss         = []
-        self.reg_loss     = []
-
-        # NC1
-        self.Sw_invSb     = []
-        self.avg_dis      = []
-        self.Sw_norm      = []
-
-        # NC2
-        self.norm_M_CoV   = []
-        self.norm_W_CoV   = []
-        self.cos_M        = []
-        self.cos_W        = []
-        self.degree_M     = []
-        self.degree_W     = []
-        self.norm_M_avg   = []
-        self.norm_W_avg   = []
-        self.norm_W_std   = []
-
-        # NC3
-        self.W_M_dist     = []
-        
-        # NC4
-        self.NCC_mismatch = []
-
-        # Decomposition
-        self.MSE_wd_features = []
-        self.LNC1 = []
-        self.LNC23 = []
-        self.Lperp = []
